@@ -7,4 +7,6 @@ public class UsuarioDAO extends Conexion<Usuario> implements GenericDao<Usuario>
 	public UsuarioDAO (){
 		super(Usuario.class);
 	}
+
+
 }

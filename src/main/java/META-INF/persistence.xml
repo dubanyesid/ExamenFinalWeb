@@ -8,16 +8,14 @@
 		<class>co.edu.ufps.entities.Typedb</class>
 		<class>co.edu.ufps.entities.Usuario</class>
 	<properties>
-		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://3306"/>
-				<property name="javax.persistence.jdbc.user" value="root"/>
-				<property name="javax.persistence.jdbc.password" value=""/>
-				<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-				<property name="javax.persistence.schema-generation.database.action" value="none"/>
-				<property name="hibernate.dialect" value=" org.hibernate.dialect.MariaDB53Dialect"/>
-				<property name="hibernate.show_sql" value="true"/>
-				<property name="hibernate.format_sql" value="true"/>
-				<property name="cascade" value="all"/>
-	
+		 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/reportes" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.schema-generation.database.action" value="none" />
+            <property name="hibernate.dialect" value=" org.hibernate.dialect.MariaDB53Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
 	</properties>
 	</persistence-unit>
 </persistence>

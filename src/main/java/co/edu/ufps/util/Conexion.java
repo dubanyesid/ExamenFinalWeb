@@ -1,11 +1,15 @@
 package co.edu.ufps.util;
 
-import java.util.*;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.TypedQuery; 
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.ParameterExpression;
+import javax.persistence.criteria.Root;
 
 public class Conexion <T> {
 	private Class<T> c;
@@ -81,6 +85,28 @@ public class Conexion <T> {
 			//em.close();
 		}
 		
+	}
+	public <E> T buscarFila(String fieldName, E fieldValue) {
+		CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
+		CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(c);
+		Root<T> root = criteriaQuery.from(c);
+		criteriaQuery.select(root);
+
+		ParameterExpression<String> params = criteriaBuilder.parameter(String.class);
+		criteriaQuery.where(criteriaBuilder.equal(root.get(fieldName), params));
+
+		TypedQuery<T> query = (TypedQuery<T>) em.createQuery(criteriaQuery);
+		query.setParameter(params, (String) fieldValue);
+
+		List<T> queryResult = query.getResultList();
+
+		T returnObject = null;
+
+		if (!queryResult.isEmpty()) {
+			returnObject = queryResult.get(0);
+		}
+
+		return returnObject;
 	}
 
 }

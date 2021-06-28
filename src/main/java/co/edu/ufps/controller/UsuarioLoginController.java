@@ -47,7 +47,7 @@ public class UsuarioLoginController extends HttpServlet {
 			throws ServletException, IOException {
 		String usuario = request.getParameter("usuario");
 		String pass = request.getParameter("pass");
-		Usuario u = usuarioDao.findByField("usuario", usuario);
+		Usuario u = usuarioDao.buscarFila("usuario", usuario);
 		if (u != null) {
 			if (u.getUsuario().equals(usuario) && u.getPass().equals(pass) && u.getState() == 1) {
 				request.getSession().setAttribute("user", u);
