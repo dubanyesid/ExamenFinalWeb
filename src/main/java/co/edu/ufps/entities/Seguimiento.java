@@ -36,6 +36,21 @@ public class Seguimiento implements Serializable {
 
 	public Seguimiento() {
 	}
+	
+	public Seguimiento(int id, Timestamp dategenerate, String detailrequest, String filegenerate, String result,
+			short state, String type, Reporte reporte) {
+		super();
+		this.id = id;
+		this.dategenerate = dategenerate;
+		this.detailrequest = detailrequest;
+		this.filegenerate = filegenerate;
+		this.result = result;
+		this.state = state;
+		this.type = type;
+		this.reporte = reporte;
+	}
+
+
 
 	public int getId() {
 		return this.id;

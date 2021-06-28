@@ -25,6 +25,15 @@ public class Rol implements Serializable {
 
 	public Rol() {
 	}
+	
+	
+	public Rol(int id, String description, List<Usuario> usuarios) {
+		super();
+		this.id = id;
+		this.description = description;
+		this.usuarios = usuarios;
+	}
+
 
 	public int getId() {
 		return this.id;

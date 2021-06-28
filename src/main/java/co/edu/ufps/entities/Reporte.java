@@ -39,6 +39,20 @@ public class Reporte implements Serializable {
 
 	public Reporte() {
 	}
+	
+	public Reporte(int id, Timestamp datecreate, String description, String file, String name, String state,
+			Connectiontoken connectiontoken, List<Seguimiento> seguimientos) {
+		super();
+		this.id = id;
+		this.datecreate = datecreate;
+		this.description = description;
+		this.file = file;
+		this.name = name;
+		this.state = state;
+		this.connectiontoken = connectiontoken;
+		this.seguimientos = seguimientos;
+	}
+
 
 	public int getId() {
 		return this.id;
