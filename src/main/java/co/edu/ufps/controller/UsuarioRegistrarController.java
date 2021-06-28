@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.List;
 import co.edu.ufps.entities.Usuario;
 import co.edu.ufps.entities.Rol;
+import co.edu.ufps.util.*;
 
 /**
  * Servlet implementation class UsuarioRegistrarController
@@ -62,6 +63,9 @@ public class UsuarioRegistrarController extends HttpServlet {
         u.setPass(pass);
         u.setRol(rol);
         u.setState(state);
+        EnviarEmail ee = new EnviarEmail();
+        ee.enviarEmail(email, "Registro exitoso sistema reportes",  "http://localhost:8086"+request.getContextPath()");
+		response.sendRedirect(request.getContextPath()+"/Registro?registro=Se ha registrado verifique su correo electronico");
         usuarioDao.insert(u);
 		doGet(request, response);
 	}
