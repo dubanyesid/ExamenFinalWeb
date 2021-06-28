@@ -7,27 +7,30 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>Login</title>
 <!-- CSS only -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-	crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="estilos/style.css"> <!-- acomodar la redireccion--> 
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 </head>
 
 <body>
-	<form class="w-50 p-3" action="UsuarioLoginController"
+   <form class="formulario" action="UsuarioLoginController"
 		method="POST">
-		<div class="form-group">
-			<label for="usuario">Usuario</label> <input type="text" required
-				class="form-control" placeholder="Enter email" name="usuario">
+		<h1>Iniciar sesión</h1>
+		<div class="contenedor">
+		 <div class="input-contenedor">
+			<i class="fas fa-user"></i>
+			<input type="text" placeholder="Usuario">
+		 </div>
+
+		 <div class="input-contenedor">
+			<i class="fas fa-lock"></i>
+			<input type="password" placeholder="Contraseña">
+		 </div>
+
+		<button type="submit" value="IniciarSesion"class="button">Iniciar sesión</button>
 		</div>
-		<div class="form-group">
-			<label for="pass">Password</label> <input type="password" required
-				class="form-control" placeholder="Password" name="pass">
-		</div>
-		<button type="submit" class="btn btn-primary">Registrar</button>
+
 	</form>
 </body>
 

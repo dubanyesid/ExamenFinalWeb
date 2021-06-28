@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/bfd4c33ec6.js" crossorigin="anonymous"></script>
 <title>Document</title>
 <!-- CSS only -->
 <link
@@ -14,21 +15,33 @@
 	rel="stylesheet"
 	integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
 	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 <body>
-	<form class="w-50 p-3" action="UsuarioRegistrarController" method="POST">
+	<form class="formulario" action="UsuarioRegistrarController" method="POST">
+		<h1>Registrate</h1>
+		<div class="contenedor">
 		<div class="form-group">
-			<label for="user">Usuario</label> <input type="text" required
-				class="form-control" placeholder="Usuario" name="usuario">
-		</div>
+			<i class="far fa-user icon"></i>
+			<label for="user">Usuario</label>  <input type="text" required
+				class="form-control" placeholder="Usuario" name="usuario"> 
+			</div>
+			</div>
+		<div class="contenedor">
 		<div class="form-group">
+			<i class="far fa-envelope icon"></i>
 			<label for="email">Email</label> <input type="email" required
 				class="form-control" placeholder="email" name="email">
 		</div>
+		</div>
+		<div class="contenedor">
 		<div class="form-group">
+			<i class="far fa-envelope icon"></i>
 			<label for="password">Password</label> <input type="password" required
 				class="form-control" placeholder="*****" name="pass">
+		</div>
 		</div>
 		<div class="form-group">
 			<select name="role">
@@ -42,7 +55,7 @@
 		<input type="hidden" class="form-control" name="state" value="1">
 
 		<div class="form-group">
-			<button type="submit" class="btn btn-primary">Registrar</button>
+			<button type="submit" class="button">Registrar</button>
 		</div>
 	</form>
 </body>
