@@ -28,7 +28,7 @@ public void enviarEmail(String toAddress, String asunto, String mensaje){
     // creates a new session with an authenticator
     Authenticator auth = new Authenticator() {
         public PasswordAuthentication getPasswordAuthentication() {
-            return new PasswordAuthentication("palo1493@gmail.com", "d9a1oo30");
+            return new PasswordAuthentication("duyesil020@gmail.com", "yesid020813");
         }
     };
 
